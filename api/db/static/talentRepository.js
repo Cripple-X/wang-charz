@@ -50,6 +50,13 @@ const requireKeyword = function(keywords, not = false) {
 
 
 const core = [
+   {
+    ...talent('redacted records',60,'Absolute Incineration',20,'Combat,Damage'),
+    snippet: 'When you use a weapon with the Melta Trait at Short Range, increase both the ED and AP by +Rank',
+    description:
+      '<p>You unleash a blistering thermal assault that reduces flesh and armour alike to liquidYou unleash a blistering thermal assault that reduces flesh and armour alike to liquid</p>' +
+    ],
+  },
   {
     ...talent('core',129,'Acute Sense [Sense]',20,'Skill'),
     key: 'core-acute-sense',
@@ -67,6 +74,16 @@ const core = [
     allowedMultipleTimes: true,
     modifications: [
       { targetGroup: 'skills', targetValue: 'awareness', modifier: 0, rank: 1, condition: 'when using the selected sense.' },
+    ],
+  },
+  {
+    ...talent('redacted records',60,'Anatomical Scourge',20,'Combat,Damage'),
+    snippet: 'You can +2ED when you make a Called Shot.',
+    description:
+      '<p>Whether you’re a trained medic, a Sister Hospitaller, a Mechanicus Biologis, or even a Psyker trained in Biomancy, your knowledge of anatomy and biology can be extremely useful for targeting vital organs with precision shots. </p>' +
+    requirements: [
+    requireSkill('medicae', 2), OR
+    requireKeyword('PSYKER')],
     ],
   },
   {
@@ -88,6 +105,15 @@ const core = [
     requirements: [
       requireSpecies('Adeptus Astartes'),
       requireRank(2),
+    ],
+  },
+   {
+    ...talent('redacted records',60,'Angel of Mercy',10,'Utility'),
+    snippet: 'Add +Rank to your Medicae (Int) dice pool to determine how many Wounds you can remove in a Regroup of an hour or longer.',
+    description:
+      '<p>You are resolved to lend medical assistance to as many as you can, never resting when there is work to be done. Add +Rank to your Medicae (Int) dice pool to determine how many Wounds you can remove in a Regroup of an hour or longer. You can split the number of Wounds you remove between multiple characters, rather than a single target </p>' +
+    requirements: [
+    requireSkill('medicae', 2)],
     ],
   },
   {
