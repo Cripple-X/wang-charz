@@ -107,13 +107,33 @@ const core = [
       requireRank(2),
     ],
   },
-   {
+  {
     ...talent('red1',60,'Angel of Mercy',10,'Utility'),
     snippet: 'Add +Rank to your Medicae (Int) dice pool to determine how many Wounds you can remove in a Regroup of an hour or longer.',
     description:
       '<p>You are resolved to lend medical assistance to as many as you can, never resting when there is work to be done. Add +Rank to your Medicae (Int) dice pool to determine how many Wounds you can remove in a Regroup of an hour or longer. You can split the number of Wounds you remove between multiple characters, rather than a single target </p>' +
     requirements: [
     requireSkill('medicae', 2)],
+    ],
+  },
+  {
+    ...talent('red1',60,'Animal Wrangler',10,'Utility'),
+    snippet: 'You gain +Double Rank bonus dice on any social Skill Test against a target with the BEAST Keyword. You may choose to use the Survival (Wil) Skill for any social Skill Tests against these targets.',
+    description:
+      '<p>You have a background in taming wild beasts, domesticating them as beasts of burden or relating to them as one animal to another. You gain +Double Rank bonus dice on any social Skill Test against a target with the BEAST Keyword. You may choose to use the Survival (Wil) Skill for any social Skill Tests against these targets. </p>' +
+    requirements: [
+    requireSkill('survival', 2)],
+    ],
+  },
+  {
+    ...talent('red1',61,'Arch-Performer',10,'Utility'),
+    snippet: 'If an enthusiast of the arts witnesses your performance, you gain +Rank bonus dice to social Skills targeting them for the rest of the scene. ',
+    description:
+      '<p>You have devoted your body to a creative endeavour you perform live before an audience. As well as providing personal fulfilment, it occasionally provides an excellent distraction. </p>' +
+      '<p>Choose a type of performance appropriate for the 41st Millennium — choral singing, organ playing, hagiographic recital, ritual dance, etc. You excel at this art form or craft.  </p>' +
+      '<p>t form or craft. If an enthusiast of the arts witnesses your performance, you gain +Rank bonus dice to social Skills targeting them for the rest of the scene. </p>' +
+      '<p>If you ever undertake a skill Test to determine the success of the performance itself — rolling Deception (Fel) to attract attention away from companions, for example — you gain +Double Rank bonus dice on the Test. </p>' +
+      '<p>If you have a chance to practise your performing art during a Regroup, you reduce your Shock to zero.</p>' +
     ],
   },
   {
@@ -130,6 +150,20 @@ const core = [
       '<li><span class="text--keyword">POWER FIELD</span></li>' +
       '</ul>',
     requirements: [ requireSkill('weaponSkill', 2) ],
+  },
+  {
+    ...talent('red1',61,'Arsonist',10,'Combat,Damage'),
+    snippet: 'When you inflict the On Fire Condition, your victims suffer an additional +Rank Mortal Wounds at the start of each of your Turns',
+    description:
+      '<p>You keep starting fires, and they burn long into the night. When you inflict the On Fire Condition, your victims suffer an additional +Rank Mortal Wounds at the start of each of your Turns. The DN for the Athletics (S) Test for your victims to remove the Condition is also increased by +Rank. </p>' +
+    ],
+  },
+  {
+    ...talent('red1',61,'A Feast in Famine',10,'Utility'),
+    snippet: 'When you prepare food for your allies during a Regroup, anyone who partakes in the meal besides yourself removes all Shock.',
+    description:
+      '<p>You are a talented and resourceful cook, able to make a satisfying repast from meagre ration packs, hunted local fauna, or scavenged scraps, raising the spirits of your comrades. When you prepare food for your allies during a Regroup, anyone who partakes in the meal besides yourself removes all Shock. </p>' +
+    ],
   },
   /*{
     ...talent('core',129,'Augmetic, Very Rare',20,'Wargear'),
@@ -246,7 +280,23 @@ const core = [
     ],
     allowedMultipleTimes: true,
   },
-  {
+ {
+    ...talent('red1',61,'Blademaster',10,'Combat'),
+    snippet: 'Any weapons you use with the BLADE Keyword gain the Parry Trait. When using a weapon that already has the Parry Trait (whether it has the BLADE Keyword or not), you gain additional +Rank Defence against melee attacks',
+    description:
+      '<p> You have mastered the art of blocking and riposting, giving you the edge when you clash swords with an opponent. Any weapons you use with the BLADE Keyword gain the Parry Trait. When using a weapon that already has the Parry Trait (whether it has the BLADE Keyword or not), you gain additional +Rank Defence against melee attacks. </p>' +
+    requirements: [
+    requireSkill('weaponSkill', 2)],
+    ],
+  },
+   {
+    ...talent('red1',60,'Blooadhound',10,'Utility'),
+    snippet: 'You gain +Rank bonus dice to Survival (Wil) Tests to track the target, and any attack Tests you make against the target.',
+    description:
+      '<p>YOnce you have the scent of a potential target, nothing short of their death or yours can end your pursuit. You may nominate a single creature or individual as the target of this Talent — you cannot switch targets until the next Regroup. You gain +Rank bonus dice to Survival (Wil) Tests to track the target, and any attack Tests you make against the target.</p>' +
+     ],
+   },
+    {
     ...talent('core',130,'Betrayer',20,'Corruption'),
     snippet: '+1 Corruption. Sacrifice a willing or unconscious individual for some heretic wrath.',
     requirements: [ requireKeyword('CHAOS') ],
@@ -287,6 +337,22 @@ const core = [
       '<p>You know how to place your strikes to inflict hemorrhaging injuries.</p>' +
       '<p>You may spend an Exalted Icon whenever you make a successful Weapon Skill (I) attack to inflict the Bleeding Condition to your target.</p>',
     requirements: [ requireSkill('weaponSkill', 2) ],
+  },
+  {
+    ...talent('red1',62,'Bolter Discipline',10,'Combat'),
+    snippet: 'When you use a weapon with the BOLT Keyword, it gains the Rapid Fire (2) Trait. If the weapon already has the Rapid Fire Trait, add +Rank to the weapon’s Rapid Fire rating.',
+    description:
+      '<p>Your Bolter spits forth a storm of iron that pulverises threats in an unyielding sequence of explosions. When you use a weapon with the BOLT Keyword, it gains the Rapid Fire (2) Trait. If the weapon already has the Rapid Fire Trait, add +Rank to the weapon’s Rapid Fire rating.' +
+     requirements: [
+      requireSpecies('Adeptus Astartes'),
+    ],
+  },
+   {
+    ...talent('red1',62,'Bombadier',20,'Combat'),
+    snippet: 'Any weapons you use with the Blast Trait increase their Blast rating by +Double Rank. Against Mobs (or when using a simplified theatre of the mind approach) this therefore increases the number of targets hit by +Rank.',
+    description:
+      '<p> Your munitions are modified to be extra explosive and pitched at the perfect arc to cause maximum carnage. Any weapons you use with the Blast Trait increase their Blast rating by +Double Rank. Against Mobs (or when using a simplified theatre of the mind approach) this therefore increases the number of targets hit by +Rank.</p>' +
+    ],
   },
   {
     ...talent('core',130,'Bombardment',40,'Ranged,Combat,Damage,Area'),
