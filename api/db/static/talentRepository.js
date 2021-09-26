@@ -129,9 +129,7 @@ const core = [
     ...talent('red1',61,'Arch-Performer',10,'Utility'),
     snippet: 'If an enthusiast of the arts witnesses your performance, you gain +Rank bonus dice to social Skills targeting them for the rest of the scene. ',
     description:
-      '<p>You have devoted your body to a creative endeavour you perform live before an audience. As well as providing personal fulfilment, it occasionally provides an excellent distraction. </p>' +
-      '<p>Choose a type of performance appropriate for the 41st Millennium — choral singing, organ playing, hagiographic recital, ritual dance, etc. You excel at this art form or craft.  </p>' +
-      '<p>t form or craft. If an enthusiast of the arts witnesses your performance, you gain +Rank bonus dice to social Skills targeting them for the rest of the scene. </p>' +
+      '<p>If an enthusiast of the arts witnesses your performance, you gain +Rank bonus dice to social Skills targeting them for the rest of the scene. </p>' +
       '<p>If you ever undertake a skill Test to determine the success of the performance itself — rolling Deception (Fel) to attract attention away from companions, for example — you gain +Double Rank bonus dice on the Test. </p>' +
       '<p>If you have a chance to practise your performing art during a Regroup, you reduce your Shock to zero.</p>' +
     ],
@@ -290,7 +288,7 @@ const core = [
     ],
   },
    {
-    ...talent('red1',60,'Blooadhound',10,'Utility'),
+    ...talent('red1',60,'Bloodhound',10,'Utility'),
     snippet: 'You gain +Rank bonus dice to Survival (Wil) Tests to track the target, and any attack Tests you make against the target.',
     description:
       '<p>YOnce you have the scent of a potential target, nothing short of their death or yours can end your pursuit. You may nominate a single creature or individual as the target of this Talent — you cannot switch targets until the next Regroup. You gain +Rank bonus dice to Survival (Wil) Tests to track the target, and any attack Tests you make against the target.</p>' +
@@ -463,6 +461,13 @@ const core = [
       '<p>When you suffer your maximum Wounds, you are not Dying. Roll once on the Memorable Injuries table and heal 1 Wound.</p>' +
       '<p>You may not use this Talent again until you complete a Regroup.</p>',
     requirements: [],
+  },
+  {
+    ...talent('red1',64,'Dig In Deep',10,'Combat'),
+    snippet: 'You are an expert of defensive warfare, making maximum use of cover to reinforce your position.',
+    description:
+      '<p>When targeted by enemy attacks whilst concealed by cover, you gain +2 Defence (instead of +1) if less than half of you is concealed, and +4 Defence (instead of +2) if more than half of you is concealed.</p>' +
+      '<p>If enemies target you by Shoot Through Cover gain +Rank Resilience.</p>' +
   },
   {
     ...talent('core',132,'Dirty Fighter',20,'Combat,Interaction,Debuff'),
